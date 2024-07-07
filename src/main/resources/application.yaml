@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/demo_db
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update # open source object relational mapping (ORM) tool , use framework to map object-oriented domain model to a relational database
+      # the behaviour we want hibernate to do when we start the application # will create schema and destroy previous data (for dev mode)
+    show-sql: true # will show the sql queries in the console
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
